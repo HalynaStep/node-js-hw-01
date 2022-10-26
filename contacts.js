@@ -27,7 +27,7 @@ async function removeContact(contactId) {
     return null
   }
   const deletedContact = contacts.filter(contact => contact.id !== contactId);
-  await fs.writeFile(contactsPath, JSON.stringify(contacts))
+  await fs.writeFile(contactsPath, JSON.stringify(deletedContact))
   return deletedContact;
 }
 
